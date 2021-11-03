@@ -152,14 +152,15 @@ Use the removeFlavorByName function below to do the following:
 // outside of the loop, return the array.
 
 function removeFlavorByName(array, removedItem){
-  for(i = 0; i < array.length; i++) {
+  for(let i = 0; i < array.length; i++) {
     if (array[i] === removedItem) {
       array.splice(i, 1)
     }
   }
   return array;
 }
-// console.log('task 6', removeFlavorByName(originalFlavors, 'Peach'))
+
+console.log('task 6', removeFlavorByName(originalFlavors, 'Rocky Road'))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -194,7 +195,7 @@ function filterByWord(array, string){
   return filtered;
 }
 
-console.log('task 7', filterByWord[originalFlavors, 'Chocolate']);
+console.log('task 7', filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
