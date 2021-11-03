@@ -82,9 +82,11 @@ Use the addFlavor function below to do the following:
 
 // recieve an array(1) and a string (2 - new flavor). .unshift to add flavor to the beginning, then return the new array.
 function addFlavor(array, item){
- /*your code here*/
+  array.unshift(item);
+  return array;
 }
 
+console.log('task 3', addFlavor(originalFlavors, "Butter Pecan"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -99,10 +101,11 @@ Use the removeLastFlavor function below to do the following:
 
 // .pop to remove last item, return the array.
 function removeLastFlavor(array){
- /*your code here*/
+  array.pop();
+  return array;
 }
 
-
+console.log('task 4', removeLastFlavor(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -117,7 +120,7 @@ Use the getFlavorByIndex function below to do the following:
 
 //return item at desired index (number)
 function getFlavorByIndex(array, number){
-  return array[number]
+  return array[number];
 }
 
 console.log('task 5', getFlavorByIndex(originalFlavors, 5))
@@ -140,11 +143,16 @@ Use the removeFlavorByName function below to do the following:
 // 2 para; array, string we want gone.
 // loop through the array and check every index for the exact match of the string. if it exists, then rmeove it (.splice(i, 1)).
 // outside of the loop, return the array.
+
 function removeFlavorByName(array, removedItem){
- 
+  for(i = 0; i < array.length; i++) {
+    if (array[i] === removedItem) {
+      array.splice(i, 1)
+    }
+  }
+  return array;
 }
-
-
+// console.log('task 6', removeFlavorByName(originalFlavors, 'Peach'))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
